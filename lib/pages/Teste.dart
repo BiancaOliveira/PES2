@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lobisomen/pages/SobreDesenvolvimento.dart';
-import 'package:lobisomen/pages/Tutorial.dart';
-import 'package:lobisomen/pages/Teste.dart';
 import 'package:lobisomen/pages/classes/Aldeao.dart';
+import 'package:lobisomen/pages/classes/AldeaoTeste.dart';
 import 'package:lobisomen/pages/classes/Feiticeira.dart';
 import 'package:lobisomen/pages/classes/Lobisomem.dart';
 

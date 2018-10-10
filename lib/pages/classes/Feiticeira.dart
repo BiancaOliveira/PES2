@@ -96,6 +96,9 @@ class FeiticeiraState extends State<Feiticeira> {
               onPressed: (){
                 status = true;
                 print(status);
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => TelaIntermediaria()),
+                );
               },
               child: Text(
                   "Sim",
@@ -122,6 +125,9 @@ class FeiticeiraState extends State<Feiticeira> {
               onPressed: (){
                 status = false;
                 print(status);
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => TelaIntermediaria()),
+                );
               },
               child: Text(
                   "Não",
@@ -140,27 +146,26 @@ class FeiticeiraState extends State<Feiticeira> {
 
 
     Widget nextSection = Container(
-      padding: EdgeInsets.only(top: 50.0),
-      alignment: Alignment.bottomRight,
+      padding: EdgeInsets.only(top: 48.0),
+      alignment: Alignment.center,
       child: Column(
         children:[
-          Padding(
-            padding: const EdgeInsets.only(right: 25.0),
-            child: IconButton(
-              icon: Icon(
-                Icons.arrow_forward,
-                color: Colors.white30,
-                size: 70.0,
-              ),
-              onPressed: (){
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (_) => TelaIntermediaria()),
-                );
-              },
+          IconButton(
+            iconSize: 50.0,
+            icon: Icon(
+              Icons.arrow_forward,
+              color: Colors.white30,
+              size: 70.0,
             ),
+            onPressed: (){
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => TelaIntermediaria()),
+              );
+            },
           ),
+
           Padding(
-            padding: const EdgeInsets.only(top: 25.0),
+            padding: const EdgeInsets.only(top: 5.0),
             child: Text(
                 "Proximo",
                 textAlign: TextAlign.center,
@@ -171,9 +176,8 @@ class FeiticeiraState extends State<Feiticeira> {
                 )
             ),
           ),
-
         ],
-      )
+      ),
     );
 
     return MaterialApp(
