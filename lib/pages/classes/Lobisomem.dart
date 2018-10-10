@@ -78,40 +78,38 @@ class LobisomemState extends State<Lobisomem> {
     );
 
     Widget nextSection = Container(
-        padding: EdgeInsets.only(top: 50.0),
-        alignment: Alignment.bottomRight,
-        child: Column(
-          children:[
-            Padding(
-              padding: const EdgeInsets.only(right: 25.0),
-              child: IconButton(
-                icon: Icon(
-                  Icons.arrow_forward,
-                  color: Colors.white30,
-                  size: 70.0,
-                ),
-                onPressed: (){
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (_) => TelaIntermediaria()),
-                  );
-                },
-              ),
+      padding: EdgeInsets.only(top: 102.0),
+      alignment: Alignment.center,
+      child: Column(
+        children:[
+          IconButton(
+            iconSize: 50.0,
+            icon: Icon(
+              Icons.arrow_forward,
+              color: Colors.white30,
+              size: 70.0,
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 25.0),
-              child: Text(
-                  "Proximo",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontFamily: 'SpecialElite',
-                    color: Colors.white70,
-                    fontSize: 12.0,
-                  )
-              ),
-            ),
+            onPressed: (){
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => TelaIntermediaria()),
+              );
+            },
+          ),
 
-          ],
-        )
+          Padding(
+            padding: const EdgeInsets.only(top: 5.0),
+            child: Text(
+                "Proximo",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontFamily: 'SpecialElite',
+                  color: Colors.white70,
+                  fontSize: 12.0,
+                )
+            ),
+          ),
+        ],
+      ),
     );
 
     return MaterialApp(
