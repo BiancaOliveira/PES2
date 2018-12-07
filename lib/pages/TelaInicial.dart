@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lobisomen/pages/Configuracao.dart';
 import 'package:lobisomen/pages/SobreDesenvolvimento.dart';
 import 'package:lobisomen/pages/Tutorial.dart';
 import 'package:lobisomen/pages/Teste.dart';
@@ -30,7 +31,7 @@ class TelaIncialState extends State<TelaIncial> {
               ),
               onPressed: (){
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (_) => Teste()),
+                  MaterialPageRoute(builder: (_) => Configuracao()),
                 );
               },
               child: Text(
