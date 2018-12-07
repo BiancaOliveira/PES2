@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lobisomen/pages/ControllerJogadores.dart';
+import 'package:lobisomen/pages/Controller/ControllerJogadores.dart';
+import 'package:lobisomen/pages/TelaAnoiteceu.dart';
+import 'package:lobisomen/pages/TelaIntermediaria.dart';
 void main() => runApp(Configuracao());
 class Configuracao extends StatelessWidget{
   @override
@@ -109,7 +111,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
                 'Numero de jogadores:',
                 textAlign: TextAlign.justify,
                 style: TextStyle(
-                  fontSize: 16.0,
+                  fontSize: 16.5,
                   color: Colors.white70,
                 )
             ),
@@ -146,7 +148,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
                 ' $_Jogadores ',
                 textAlign: TextAlign.justify,
                 style: TextStyle(
-                  fontSize: 16.0,
+                  fontSize: 16.5,
                   color: Colors.white70,
                 )
             ),
@@ -195,19 +197,19 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
               children: [
                 Padding(
                   //padding: const EdgeInsets.all(80.0),
-                  padding: const EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
+                  padding: const EdgeInsets.fromLTRB(0.0, 10.0, 40.0, 0.0),
                   child: Text(
                       'Aldeão:',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontSize: 16.0,
+                        fontSize: 16.5,
                         color: Colors.white70,
                       )
                   ),
                 ),
 
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+                  padding: const EdgeInsets.fromLTRB(90.0, 10.0, 0.0, 0.0),
                   child: Text(
                       ' $_Aldeao ',
                       textAlign: TextAlign.justify,
@@ -223,12 +225,12 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
               children: [
                 Padding(
                   //padding: const EdgeInsets.all(80.0),
-                  padding: const EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
+                  padding: const EdgeInsets.fromLTRB(0.0, 10.0, 40.0, 0.0),
                   child: Text(
                       'Lobisomem: ',
                       textAlign: TextAlign.justify,
                       style: TextStyle(
-                        fontSize: 16.0,
+                        fontSize: 16.5,
                         color: Colors.white70,
                       )
                   ),
@@ -265,7 +267,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
                       ' $_Lobo ',
                       textAlign: TextAlign.justify,
                       style: TextStyle(
-                        fontSize: 16.0,
+                        fontSize: 16.5,
                         color: Colors.white70,
                       )
                   ),
@@ -301,12 +303,12 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
               children: [
                 Padding(
                   //padding: const EdgeInsets.all(80.0),
-                  padding: const EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
+                  padding: const EdgeInsets.fromLTRB(0.0, 10.0, 65.0, 0.0),
                   child: Text(
                       'Caçador: ',
                       textAlign: TextAlign.justify,
                       style: TextStyle(
-                        fontSize: 16.0,
+                        fontSize: 16.5,
                         color: Colors.white70,
                       )
                   ),
@@ -342,7 +344,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
                       ' $_Cacador ',
                       textAlign: TextAlign.justify,
                       style: TextStyle(
-                        fontSize: 16.0,
+                        fontSize: 16.5,
                           color: Colors.white70,
                         )
                     ),
@@ -379,12 +381,12 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
               children: [
                 Padding(
                   //padding: const EdgeInsets.all(80.0),
-                  padding: const EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
+                  padding: const EdgeInsets.fromLTRB(0.0, 10.0, 60.0, 0.0),
                   child: Text(
                       'Feiticeira: ',
                       textAlign: TextAlign.justify,
                       style: TextStyle(
-                        fontSize: 16.0,
+                        fontSize: 16.5,
                         color: Colors.white70,
                       )
                   ),
@@ -420,7 +422,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
                       ' $_Feiticeira ',
                       textAlign: TextAlign.justify,
                       style: TextStyle(
-                        fontSize: 16.0,
+                        fontSize: 16.5,
                         color: Colors.white70,
                       )
                   ),
@@ -456,12 +458,12 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
               children: [
                 Padding(
                   //padding: const EdgeInsets.all(80.0),
-                  padding: const EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 0.0),
+                  padding: const EdgeInsets.fromLTRB(0.0, 10.0, 40.0, 0.0),
                   child: Text(
                       'Cartomante: ',
                       textAlign: TextAlign.justify,
                       style: TextStyle(
-                        fontSize: 16.0,
+                        fontSize: 16.5,
                         color: Colors.white70,
                       )
                   ),
@@ -497,7 +499,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
                       ' $_Cartomante ',
                       textAlign: TextAlign.justify,
                       style: TextStyle(
-                        fontSize: 16.0,
+                        fontSize: 16.5,
                         color: Colors.white70,
                       )
                   ),
@@ -533,8 +535,30 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
         ),
       ),
     );
-    ControllerJogadores().cliarLista(_Jogadores);
-    ControllerJogadores().distribuirClasse(_Aldeao, _Lobo, _Cacador, _Feiticeira, _Cartomante);
+
+    Widget nextSection = Container(
+      alignment: Alignment.centerRight,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(0.0, 50.0, 15.0, 30.0),
+        child: IconButton(
+          iconSize: 50.0,
+          tooltip: 'Proxímo',
+          icon: Icon(
+            Icons.redo,
+            color: Colors.white70,
+            size: 70.0,
+          ),
+          onPressed: (){
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (_) => TelaAnoiteceu()),
+            );
+          },
+        ),
+      ),
+    );
+
+    ControllerJogadores().classes(_Jogadores, _Aldeao, _Lobo, _Cacador, _Feiticeira, _Cartomante);
+
     return MaterialApp(
       title: 'Arcádia',
       home: Scaffold(
@@ -544,6 +568,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
             jogadorSection,
             classeSection,
             classesSection,
+            nextSection,
           ],
         ),
         backgroundColor: Color.fromRGBO(3, 5, 36, 1.0),
