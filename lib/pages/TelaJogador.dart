@@ -25,8 +25,9 @@ class TelaJogador  extends StatefulWidget{
 class TelaJogadorState extends State<TelaJogador> {
   String _Name, _Text, _Classe, _Icon;
   List<Jogadores> _Jogadores;
-  int i;
+  int i, j;
   int _NumJogadores;
+
 
   TelaJogadorState(String _Name, String _Text, String _Classe, String _Icon,List _Jogadores, int i, int _NumJogadores){
     this._Name = _Name;
@@ -38,10 +39,47 @@ class TelaJogadorState extends State<TelaJogador> {
     this._NumJogadores =_NumJogadores;
 
   }
+  int _selected = 0;
+  void onChanged(int Value){
+    setState((){
+      _selected = Value;
+    });
+  }
 
+  List<Widget> jogadoresVivos(){
+    List<Widget> list = List<Widget>();
 
+    for(j = 0; j < _NumJogadores; j++){
+      list.add(Row(
+        children: <Widget>[
+          Text(
+            _Jogadores[j].name,
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+              fontSize: 16.5,
+              color: Color.fromRGBO(255, 255, 255, 0.9),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(50.0, 0.0, 0.0, 15.0),
+            child: Radio(
+                activeColor: Color.fromRGBO(255, 255, 255, 0.9),
+                value: j,
+                groupValue: _selected,
+                onChanged: (int Value){onChanged(Value);}
+                ),
+          )
+        ],
+      )
+      );
+
+    }
+
+    return list;
+  }
   @override
   Widget build(BuildContext context) {
+
     Widget iconeSection = Container(
       padding: EdgeInsets.only(top: 90.0,bottom: 10.0),
       alignment: Alignment.center,
@@ -109,10 +147,8 @@ class TelaJogadorState extends State<TelaJogador> {
     Widget nextSection =
         _Jogadores[i].classe == 1 || _Jogadores[i].classe == 3?
           Container(
-
             alignment: Alignment.centerRight,
             child: Padding(
-
               padding: const EdgeInsets.fromLTRB(0.0, 140.0, 15.0, 15.0),
               child: IconButton(
                 iconSize: 50.0,
@@ -131,7 +167,7 @@ class TelaJogadorState extends State<TelaJogador> {
             ),
           )
 
-        :  _Jogadores[i].classe == 4 || _Jogadores[i].classe == 2?
+        :  _Jogadores[i].classe == 4 ?
           Container(
             decoration: BoxDecoration(
               color: Colors.black54,
@@ -186,7 +222,44 @@ class TelaJogadorState extends State<TelaJogador> {
                 ),
               ),
           )
-            : Text('boi');
+
+            : _Jogadores[i].classe == 5 || _Jogadores[i].classe == 2?
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.black54,
+            ),
+            alignment: Alignment.center,
+            child: Column(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(80.0, 0.0, 20.0, 0.0),
+                  child: Column(
+                    children: jogadoresVivos(),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0.0, 10.0, 15.0, 20.0),
+                  child: IconButton(
+                    iconSize: 50.0,
+                    tooltip: 'Proxímo',
+                    icon: Icon(
+                      Icons.redo,
+                      color: Color.fromRGBO(255, 255, 255, 0.9),
+                      size: 70.0,
+                    ),
+                    onPressed: (){
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (_) => ControllerTelas().telaIntermediaria(_Jogadores, i+1,_NumJogadores)),
+                      );
+                    },
+                  ),
+                ),
+
+              ],
+
+            )
+          )
+            : Text(' ');
 
 
     return MaterialApp(
