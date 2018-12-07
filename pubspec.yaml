@@ -49,6 +49,7 @@ flutter:
     - images/icone_feiticeira.png
     - images/icone_aldeiao.png
     - images/noite.png
+    - images/dia.png
 
 
   # To add assets to your application, add an assets section, like this:

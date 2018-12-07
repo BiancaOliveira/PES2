@@ -1,5 +1,4 @@
 import 'package:lobisomen/pages/Class/Jogadores.dart';
-import 'dart:math';
 
 class ControllerJogadores{
 
@@ -57,10 +56,13 @@ class ControllerJogadores{
       }
     }
     _Jogador.shuffle();
+    return _Jogador;
   }
 
   List embaralhar(List _Jogadores){
     _Jogadores.shuffle();
     return _Jogadores;
   }
+
+
 }

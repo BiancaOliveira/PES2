@@ -27,7 +27,7 @@ class TelaIncialState extends State<TelaIncial> {
               shape:
               RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(50.0),
-                side: BorderSide(color: const Color.fromRGBO(246, 249, 174, 1.0), width: 3.0, style: BorderStyle.solid),
+                side: BorderSide(color: const Color.fromRGBO(255, 248, 200, 1.0), width: 3.0, style: BorderStyle.solid),
               ),
               onPressed: (){
                 Navigator.of(context).push(
@@ -39,7 +39,7 @@ class TelaIncialState extends State<TelaIncial> {
                  textAlign: TextAlign.center,
                  style: TextStyle(
                    fontFamily: 'SpecialElite',
-                   color: Color.fromRGBO(246, 249, 174, 1.0),
+                   color: Color.fromRGBO(255, 248, 200, 1.0),
                    fontSize: 20.0,
                  )
               ),
@@ -54,7 +54,7 @@ class TelaIncialState extends State<TelaIncial> {
               shape:
               RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(50.0),
-                side: BorderSide(color: const Color.fromRGBO(246, 249, 174, 1.0), width: 3.0, style: BorderStyle.solid),
+                side: BorderSide(color: const Color.fromRGBO(255, 248, 200, 1.0), width: 3.0, style: BorderStyle.solid),
               ),
               onPressed: (){
                 Navigator.of(context).push(
@@ -66,7 +66,7 @@ class TelaIncialState extends State<TelaIncial> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontFamily: 'SpecialElite',
-                  color: Color.fromRGBO(246, 249, 174, 1.0),
+                  color: Color.fromRGBO(255, 248, 200, 1.0),
                   fontSize: 20.0,
                 )
               ),
@@ -82,7 +82,7 @@ class TelaIncialState extends State<TelaIncial> {
               shape:
               RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(50.0),
-                side: BorderSide(color: const Color.fromRGBO(246, 249, 174, 1.0), width: 3.0, style: BorderStyle.solid),
+                side: BorderSide(color: const Color.fromRGBO(255, 248, 200, 1.0), width: 3.0, style: BorderStyle.solid),
               ),
               onPressed: (){
                 Navigator.of(context).push(
@@ -94,7 +94,7 @@ class TelaIncialState extends State<TelaIncial> {
                  textAlign: TextAlign.center,
                  style: TextStyle(
                   fontFamily: 'SpecialElite',
-                  color: Color.fromRGBO(246, 249, 174, 1.0),
+                  color: Color.fromRGBO(255, 248, 200, 1.0),
                   fontSize: 20.0,
                  )
               ),

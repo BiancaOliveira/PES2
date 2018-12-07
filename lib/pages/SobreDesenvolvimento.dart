@@ -28,7 +28,7 @@ class SobreDesenvolvimentoState extends State<SobreDesenvolvimento> {
           style: TextStyle(
             fontFamily: 'SpecialElite',
             fontSize: 40.0,
-            color: Color.fromRGBO(246, 249, 174, 1.0),
+            color: Color.fromRGBO(255, 248, 200, 1.0),
           )
       ),
     );
@@ -36,7 +36,7 @@ class SobreDesenvolvimentoState extends State<SobreDesenvolvimento> {
     Widget textSection = Container(
       child: Padding(
         //padding: const EdgeInsets.all(80.0),
-        padding: const EdgeInsets.fromLTRB(47.0, 30.0, 47.0, 5.0),
+        padding: const EdgeInsets.fromLTRB(46.0, 30.0, 46.0, 5.0),
         child: Text(
           'Jogo desenvolvido em conjunto com a diciplina de Processso de '
             'Engenharia de Software II do curso de Ciência da Computação '
@@ -45,8 +45,8 @@ class SobreDesenvolvimentoState extends State<SobreDesenvolvimento> {
             'Versão: 1.0',
             textAlign: TextAlign.justify,
           style: TextStyle(
-            fontSize: 16.0,
-            color: Colors.white70,
+            fontSize: 16.5,
+            color: Color.fromRGBO(255, 255, 255, 0.9),
           )
         ),
       ),

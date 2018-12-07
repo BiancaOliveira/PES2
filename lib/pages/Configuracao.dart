@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:lobisomen/pages/Class/Jogadores.dart';
 import 'package:lobisomen/pages/Controller/ControllerJogadores.dart';
-import 'package:lobisomen/pages/TelaAnoiteceu.dart';
-import 'package:lobisomen/pages/TelaIntermediaria.dart';
+import 'package:lobisomen/pages/Controller/ControllerTelas.dart';
 void main() => runApp(Configuracao());
 class Configuracao extends StatelessWidget{
   @override
@@ -86,14 +86,14 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
     Widget titleSection = Container(
       alignment: Alignment.center,
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(0.0, 30.0, 0.0, 0.0),
+        padding: const EdgeInsets.fromLTRB(0.0, 60.0, 0.0, 0.0),
         child: Text(
             'Configurações:',
             textAlign: TextAlign.center,
             style: TextStyle(
               fontFamily: 'SpecialElite',
               fontSize: 40.0,
-              color: Color.fromRGBO(246, 249, 174, 1.0),
+              color: Color.fromRGBO(255, 248, 200, 1.0),
             )
         ),
       ),
@@ -112,7 +112,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
                 textAlign: TextAlign.justify,
                 style: TextStyle(
                   fontSize: 16.5,
-                  color: Colors.white70,
+                  color: Color.fromRGBO(255, 255, 255, 0.9),
                 )
             ),
           ),
@@ -133,7 +133,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
             padding: const EdgeInsets.fromLTRB(0.0, 30.0, 0.0, 0.0),
             child:
             FloatingActionButton(
-              foregroundColor: Color.fromRGBO(192, 192, 192, 1.0),
+              foregroundColor: Color.fromRGBO(192, 192, 192, 0.4),
               backgroundColor: Color.fromRGBO(3, 5, 36, 1.0),
               onPressed: null,
               tooltip: 'Diminui',
@@ -149,7 +149,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
                 textAlign: TextAlign.justify,
                 style: TextStyle(
                   fontSize: 16.5,
-                  color: Colors.white70,
+                  color: Color.fromRGBO(255, 255, 255, 0.9),
                 )
             ),
           ),
@@ -181,7 +181,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
           style: TextStyle(
             fontFamily: 'SpecialElite',
             fontSize: 25.0,
-            color: Color.fromRGBO(246, 249, 174, 1.0),
+            color: Color.fromRGBO(255, 248, 200, 1.0),
           )
       ),
     ),
@@ -203,7 +203,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 16.5,
-                        color: Colors.white70,
+                        color: Color.fromRGBO(255, 255, 255, 0.9),
                       )
                   ),
                 ),
@@ -215,7 +215,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
                       textAlign: TextAlign.justify,
                       style: TextStyle(
                         fontSize: 16.0,
-                        color: Colors.white70,
+                        color: Color.fromRGBO(255, 255, 255, 0.9),
                       )
                   ),
                 ),
@@ -231,7 +231,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
                       textAlign: TextAlign.justify,
                       style: TextStyle(
                         fontSize: 16.5,
-                        color: Colors.white70,
+                        color: Color.fromRGBO(255, 255, 255, 0.9),
                       )
                   ),
                 ),
@@ -253,7 +253,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
                   child:
                   FloatingActionButton(
                     backgroundColor: Color.fromRGBO(3, 5, 36, 1.0),
-                    foregroundColor: Color.fromRGBO(192, 192, 192, 1.0),
+                    foregroundColor: Color.fromRGBO(192, 192, 192, 0.9),
                     onPressed: null,
                     tooltip: 'Diminui',
                     child: Icon(Icons.remove_circle_outline),
@@ -268,7 +268,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
                       textAlign: TextAlign.justify,
                       style: TextStyle(
                         fontSize: 16.5,
-                        color: Colors.white70,
+                        color: Color.fromRGBO(255, 255, 255, 0.9),
                       )
                   ),
                 ),
@@ -290,7 +290,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
                   child:
                   FloatingActionButton(
                     backgroundColor: Color.fromRGBO(3, 5, 36, 1.0),
-                    foregroundColor: Color.fromRGBO(192, 192, 192, 1.0),
+                    foregroundColor: Color.fromRGBO(192, 192, 192, 0.9),
                     onPressed: null,
                     tooltip: 'Aumenta',
                     child: Icon(Icons.add_circle_outline),
@@ -309,7 +309,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
                       textAlign: TextAlign.justify,
                       style: TextStyle(
                         fontSize: 16.5,
-                        color: Colors.white70,
+                        color: Color.fromRGBO(255, 255, 255, 0.9),
                       )
                   ),
                 ),
@@ -331,7 +331,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
                   child:
                   FloatingActionButton(
                     backgroundColor: Color.fromRGBO(3, 5, 36, 1.0),
-                    foregroundColor: Color.fromRGBO(192, 192, 192, 1.0),
+                    foregroundColor: Color.fromRGBO(192, 192, 192, 0.9),
                     onPressed: null,
                     tooltip: 'Diminui',
                     child: Icon(Icons.remove_circle_outline),
@@ -345,7 +345,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
                       textAlign: TextAlign.justify,
                       style: TextStyle(
                         fontSize: 16.5,
-                          color: Colors.white70,
+                          color: Color.fromRGBO(255, 255, 255, 0.9),
                         )
                     ),
                   ),
@@ -367,7 +367,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
                   child:
                   FloatingActionButton(
                     backgroundColor: Color.fromRGBO(3, 5, 36, 1.0),
-                    foregroundColor: Color.fromRGBO(192, 192, 192, 1.0),
+                    foregroundColor: Color.fromRGBO(192, 192, 192, 0.9),
                     onPressed: null,
                     tooltip: 'Aumenta',
                     child: Icon(Icons.add_circle_outline),
@@ -387,7 +387,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
                       textAlign: TextAlign.justify,
                       style: TextStyle(
                         fontSize: 16.5,
-                        color: Colors.white70,
+                        color: Color.fromRGBO(255, 255, 255, 0.9),
                       )
                   ),
                 ),
@@ -409,7 +409,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
                   child:
                   FloatingActionButton(
                     backgroundColor: Color.fromRGBO(3, 5, 36, 1.0),
-                    foregroundColor: Color.fromRGBO(192, 192, 192, 1.0),
+                    foregroundColor: Color.fromRGBO(192, 192, 192, 0.9),
                     onPressed: null,
                     tooltip: 'Diminui',
                     child: Icon(Icons.remove_circle_outline),
@@ -423,7 +423,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
                       textAlign: TextAlign.justify,
                       style: TextStyle(
                         fontSize: 16.5,
-                        color: Colors.white70,
+                        color: Color.fromRGBO(255, 255, 255, 0.9),
                       )
                   ),
                 ),
@@ -445,7 +445,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
                   child:
                   FloatingActionButton(
                     backgroundColor: Color.fromRGBO(3, 5, 36, 1.0),
-                    foregroundColor: Color.fromRGBO(192, 192, 192, 1.0),
+                    foregroundColor: Color.fromRGBO(192, 192, 192, 0.9),
                     onPressed: null,
                     tooltip: 'Aumenta',
                     child: Icon(Icons.add_circle_outline),
@@ -464,7 +464,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
                       textAlign: TextAlign.justify,
                       style: TextStyle(
                         fontSize: 16.5,
-                        color: Colors.white70,
+                        color: Color.fromRGBO(255, 255, 255, 0.9),
                       )
                   ),
                 ),
@@ -486,7 +486,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
                   child:
                   FloatingActionButton(
                     backgroundColor: Color.fromRGBO(3, 5, 36, 1.0),
-                    foregroundColor: Color.fromRGBO(192, 192, 192, 1.0),
+                    foregroundColor: Color.fromRGBO(192, 192, 192, 0.9),
                     onPressed: null,
                     tooltip: 'Diminui',
                     child: Icon(Icons.remove_circle_outline),
@@ -500,7 +500,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
                       textAlign: TextAlign.justify,
                       style: TextStyle(
                         fontSize: 16.5,
-                        color: Colors.white70,
+                        color: Color.fromRGBO(255, 255, 255, 0.9),
                       )
                   ),
                 ),
@@ -522,7 +522,7 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
                   child:
                   FloatingActionButton(
                     backgroundColor: Color.fromRGBO(3, 5, 36, 1.0),
-                    foregroundColor: Color.fromRGBO(192, 192, 192, 1.0),
+                    foregroundColor: Color.fromRGBO(192, 192, 192, 0.9),
                     onPressed: null,
                     tooltip: 'Aumenta',
                     child: Icon(Icons.add_circle_outline),
@@ -539,19 +539,21 @@ class ConfiguracaoPageState extends State<ConfiguracaoPage>{
     Widget nextSection = Container(
       alignment: Alignment.centerRight,
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(0.0, 50.0, 15.0, 30.0),
+        padding: const EdgeInsets.fromLTRB(0.0, 10.0, 15.0, 20.0),
         child: IconButton(
           iconSize: 50.0,
           tooltip: 'Proxímo',
           icon: Icon(
             Icons.redo,
-            color: Colors.white70,
+            color: Color.fromRGBO(255, 255, 255, 0.9),
             size: 70.0,
           ),
           onPressed: (){
+            List<Jogadores> _Jogadors = ControllerJogadores().classes(_Jogadores, _Aldeao, _Lobo, _Cacador, _Feiticeira, _Cartomante);
             Navigator.of(context).push(
-              MaterialPageRoute(builder: (_) => TelaAnoiteceu()),
+              MaterialPageRoute(builder: (_) => ControllerTelas().telaIntermediaria(_Jogadors, 0,_Jogadores)),
             );
+            ControllerTelas().dadosJogo('', false);
           },
         ),
       ),

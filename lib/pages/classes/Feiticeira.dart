@@ -1,3 +1,4 @@
+/*
 import 'package:flutter/material.dart';
 import 'package:lobisomen/pages/TelaIntermediaria.dart';
 
@@ -208,3 +209,4 @@ class FeiticeiraState extends State<Feiticeira> {
 
   }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 import 'package:flutter/material.dart';
 import 'package:lobisomen/pages/TelaIntermediaria.dart';
 
@@ -139,3 +140,4 @@ class LobisomemState extends State<Lobisomem> {
 
   }
 }
+*/
